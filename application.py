@@ -1,5 +1,6 @@
 import streamlit as st
 import pdfplumber
+from resume_scanner import compare
 
 # To extract text from pdf
 def extract_pdf_data(file_path):
