@@ -1,6 +1,5 @@
 import streamlit as st
-from Models import get_embeddings, cosine
-
+from model import get_embeddings, cosine
 def compare(resume_texts, JD_text):
     JD_embeddings = None
     resume_embeddings = []

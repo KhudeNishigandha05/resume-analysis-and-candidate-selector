@@ -10,15 +10,8 @@ def extract_pdf_data(file_path):
             text = page.extract_text()
             if text:
                 data += text
+    print(data)
     return data
-
-# To extract text from text_area(JD)
-def extract_text_data(file_path):
-    with open(file_path,'r') as file:
-        data = file.read()
-
-    return data
-
 
 st.header("Application Tracking System")
 # Main content
@@ -42,7 +35,7 @@ with tab2:
             my_dict[uploaded_files[i].name] = score[i]
         sorted_dict = dict(sorted(my_dict.items()))
         for i in sorted_dict.items():
-            with st.expander(str[i[0]]):
+            with st.expander(str(i[0])):
                 st.write("Score is: ",i[1])
 
         
